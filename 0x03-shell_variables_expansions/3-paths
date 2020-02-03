@@ -1,2 +1,2 @@
 #!/bin/bash
-find /PATH -type d -printf '\n' | wc -l
+echo $PATH -printf '\n' | wc -l

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Bash script that configures a new Ubuntu machine
+apt-get -y update
+apt-get -y install nginx
+sudo chown -R ubuntu:ubuntu /var/www
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+service nginx restart

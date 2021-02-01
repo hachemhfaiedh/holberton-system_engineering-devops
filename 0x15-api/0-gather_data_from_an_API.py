@@ -4,8 +4,8 @@ import requests
 from sys import argv
 
 if __name__ == "__main__":
-    U_ID = {'userId': argv[-1]}
-    ID = {'id': argv[-1]}
+    U_ID = {'userId': argv[1]}
+    ID = {'id': argv[1]}
     req1 = requests.get(
         url="https://jsonplaceholder.typicode.com/todos",
         params=U_ID)
@@ -19,7 +19,8 @@ if __name__ == "__main__":
     for task in todos:
         if task.get("completed"):
             td += 1
-    name = users[0].get("name")
+    for i in user:
+        name = i.get("name")
     print("Employee {} is done with tasks({}/{}):".format(
         name, td, len(todos)))
     for task in todos:

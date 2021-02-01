@@ -11,11 +11,11 @@ if __name__ == "__main__":
     users = req2.json()
     dictionary = {}
     with open('todo_all_employees' + '.json', mode='w') as nf:
-        for items in user:
+        for items in users:
             USERNAME = items.get("username")
             ID = items.get("id")
             dictionary[ID] = []
-            for tasks in todo:
+            for tasks in todos:
                 if ID == tasks["userId"]:
                     data = {}
                     data = {"username": USERNAME, "task": tasks.get("title"),

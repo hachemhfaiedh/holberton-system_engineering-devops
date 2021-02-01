@@ -21,7 +21,7 @@ if __name__ == "__main__":
     new_f = str(USER_ID) + '.json'
     info = {USER_ID: []}
     with open(new_f, mode='w') as nf:
-        for item in todo:
+        for item in todos:
             dic = {}
             dic["task"] = item.get('title')
             dic["completed"] = item.get('completed')

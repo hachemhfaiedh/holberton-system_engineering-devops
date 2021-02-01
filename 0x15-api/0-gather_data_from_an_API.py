@@ -14,7 +14,6 @@ if __name__ == "__main__":
         params=ID)
     todos = req1.json()
     users = req2.json()
-
     td = 0
     for task in todos:
         if task.get("completed"):

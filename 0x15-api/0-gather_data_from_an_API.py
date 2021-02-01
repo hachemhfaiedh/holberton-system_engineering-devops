@@ -19,7 +19,7 @@ if __name__ == "__main__":
     for task in todos:
         if task.get("completed"):
             td += 1
-    for i in user:
+    for i in users:
         name = i.get("name")
     print("Employee {} is done with tasks({}/{}):".format(
         name, td, len(todos)))

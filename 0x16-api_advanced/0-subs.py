@@ -8,7 +8,7 @@ def number_of_subscribers(subreddit):
     try:
         r = requests.get(
             'https://www.reddit.com/r/{}/about.json'.format(subreddit),
-        headers=headers)
+            headers=headers)
         data = r.json()
         return(data.get('data').get('subscribers'))
     except AttributeError:

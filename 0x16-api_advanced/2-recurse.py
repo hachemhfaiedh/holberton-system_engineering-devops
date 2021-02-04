@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' Subscribers count'''
+'''list containing the titles of all hot articles for a given subreddit'''
 import requests
 
 
@@ -16,7 +16,7 @@ def recurse(subreddit, hot_list=[], after=''):
         for i in b:
             hot_list.append(i.get('data').get('title'))
         after = a.get('after')
-        if after is None:
+        if after:
             return recurse(subreddit, hot_list, after)
         return hot_list
     except AttributeError:
